@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgb(80, 54, 54);
+}
+.container{
+    border-radius: 5px;
+    position: relative;
+    background-color: #fff;
+    padding: 25px;
+    box-shadow: 0 0 15px black;
+}
+.container h2{
+    color:black;
+    text-align: center;
+}
+.form :where(.boxx input, .select-box) {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+.boxx input:focus{
+    box-shadow: 0 1px 0 black;
+}
+.form .column{
+    display: flex;
+    column-gap: 15px;
+}
+.electives :where(input, .choose) {
+    margin-top: 15px;
+    outline: black;
+}
+.choose select{
+    color: black;
+    font-size: 20pxpx;
+    padding: 10px 10px 10px 10px;
+}
+button{
+    padding: 15px 15px 15px 15px;
+}
+button:hover{
+    transform: scale(1.3);
+}
+@media screen and (max-width: 500px) {
+    .form .column{
+        flex-wrap: wrap;
+    }
+    .form :where( .gender-option, .gender) {
+        row-gap: 15px;
+    }
+}
